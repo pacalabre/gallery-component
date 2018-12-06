@@ -59,6 +59,7 @@
     right: 0px;
     padding: 10px 10px 30px 10px;
     top: 120px;
+    display: none;
 }
 
 .filter-menu-button {
@@ -122,6 +123,11 @@
     width: 300px;
     max-width: 500px;
     max-height: 500px
+}
+
+/* Classes for showing Dynamic Behavior */
+.show {
+    display: block;
 }
 
 /* States for both Mobile and Desktop */
