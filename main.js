@@ -1,4 +1,6 @@
-
+let tagsArr = [];
+let gridArr = [];
+let gridItems = $('.grid').children();
 
 $('.grid').masonry({
     // options
@@ -7,10 +9,10 @@ $('.grid').masonry({
     // percentPosition: true,
     // gutter: 1,
     fitWidth: true
-  });
+});
 
 $('#filterButton').on('click', function(){
-	$('.filter-menu').toggleClass('show');
+    $('.filter-menu').toggleClass('show');
 })
 
 /* Close the menu if you click away from it */
@@ -19,3 +21,12 @@ $(document).click(function(event) {
     $("body").find(".filter-menu").removeClass("show");
   }
 });
+
+gridItems.each(function(index,gridItem) {
+    let itemTag = gridItems[index].dataset.tags;
+    if (!tagsArr.includes(itemTag)){
+        tagsArr.push(itemTag);
+    }
+})
+
+console.log(tagsArr);
