@@ -3,13 +3,12 @@
 :root {
     --avanade-orange: #ff5200;
     --light-gray: #d3d3d3;
+    --primary-font: arial;
 }
 
 /* Main Component Styles */
 
 .gallery-section {
-    /* height: 1100px;
-    overflow: hidden; */
     max-width: 1400px;
     margin: auto;
 }
@@ -24,7 +23,7 @@
 
 .filter-container {
     border-radius: 20px;
-    border: solid lightgrey thin;
+    border: solid var(--light-gray) thin;
     box-shadow: 1px 1px 10px 0px var(--light-gray);
 }
 
@@ -33,6 +32,7 @@
     background: transparent;
     border: none;
     font-size: 16px;
+    font-family: var(--primary-font);
 }
 
 .filter-button-left {
@@ -75,7 +75,7 @@
 .filter-menu-title {
     padding: 5px;
     font-size: 16px;
-    font-family: arial;
+    font-family: var(--primary-font)
 }
 
 .filter-menu-button-container {
@@ -83,7 +83,7 @@
 }
 
 .section-title {
-    font-family: 'arial';
+    font-family: var(--primary-font);
     font-weight: 500;
     font-size: 30px;
     margin-bottom: 20px;
@@ -98,13 +98,14 @@
 .grid-item {
     margin: 3px;
     text-decoration: none;
+    overflow: hidden;
 }
 
 .grid-item-text {
     position: absolute;
     top: 45%;
     left: 15px;
-    font-family: arial;
+    font-family: var(--primary-font);
     color: var(--avanade-orange);
 }
 
@@ -127,6 +128,7 @@
 }
 
 /* Classes for showing Dynamic Behavior */
+
 .show {
     display: block;
 }
@@ -142,7 +144,7 @@
 
 /* States for both Mobile and Desktop */
 
-.filter-container-buttons:active {
+.filter-button-left:active {
     background: var(--avanade-orange);
     color: white;
 }
@@ -150,10 +152,6 @@
 /* Responsive  Styles*/
 
 @media (min-width: 768px) {
-
-    /* .gallery-section {
-        height: 800px;
-    } */
 
     .gallery-title-and-filters { 
         margin: 40px 80px 100px 80px;
@@ -192,7 +190,7 @@
 
     /* States for Desktop */
 
-    .filter-container-buttons:hover, .filter-container-buttons:hover .filter-button-icon, .filter-menu-button:hover {
+    .filter-button-left:hover, .filter-menu-button:hover {
         background: var(--avanade-orange);
         color: white;
         text-decoration: underline;
@@ -217,9 +215,6 @@
 }
 
 @media (min-width: 900px) {
-    /* .gallery-section {
-        height: 600px;
-    } */
 
     .grid-item-img{
         width: 250px;
